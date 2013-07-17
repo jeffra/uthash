@@ -267,6 +267,10 @@ do {                                                                            
     HASH_ADD(hh,head,ptrfield,sizeof(void *),add)
 #define HASH_REPLACE_PTR(head,ptrfield,add)                                      \
     HASH_REPLACE(hh,head,ptrfield,sizeof(void *),add,replaced)
+#define HASH_ADD_ULONG(head,ulongfield,add)                                      \
+    HASH_ADD(hh,head,ulongfield,sizeof(unsigned long),add)
+#define HASH_FIND_ULONG(head,findulong,out)                                      \
+    HASH_FIND(hh,head,findulong,sizeof(unsigned long),out)
 #define HASH_DEL(head,delptr)                                                    \
     HASH_DELETE(hh,head,delptr)
 
